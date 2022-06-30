@@ -1,11 +1,11 @@
-import { MasterClass } from "./pages/MasterClass";
-
-
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./lib/apollo";
+import { Router } from "./Router";
 function App() {
   return (
-    <div>
-      <MasterClass/>
-    </div>
+    <ApolloProvider client={client}>
+      <Router/>
+    </ApolloProvider>
   );
 }
 
